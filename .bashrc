@@ -8,7 +8,7 @@ eval "$(starship init bash)"
 
 # dotfiles management
 alias config='/run/current-system/sw/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-alias nixconfig='/run/current-system/sw/bin/git --git-dir=$HOME/dotfiles/ --work-tree=/'
+alias nixconfig='/run/current-system/sw/bin/git --git-dir=$HOME/nixdotfiles/ --work-tree=/'
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
