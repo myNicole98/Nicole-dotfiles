@@ -29,10 +29,6 @@
 	package = pkgs.rose-pine-cursor;
         size = 24;
       };
-      #iconTheme = {
-      #  name = "rose-pine-moon";
-      #  package = pkgs.rose-pine-icon-theme;
-      #};
       iconTheme = {
         name = "Papirus-Dark";
         package = pkgs.papirus-icon-theme;
