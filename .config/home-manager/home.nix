@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+#    imports = [
+#    ./catppuccin.nix
+#  ];
+
     nixpkgs = {
       config = {
         allowUnfree = true;
@@ -22,12 +26,12 @@
 
       theme = {
         name = "rose-pine-moon";
-	package = pkgs.rose-pine-gtk-theme;
-      };
-      cursorTheme = {
+	       package = pkgs.rose-pine-gtk-theme;
+     };
+     cursorTheme = {
         name = "rose-pine-cursor";
-	package = pkgs.rose-pine-cursor;
-        size = 24;
+	      package = pkgs.rose-pine-cursor;
+       size = 24;
       };
       iconTheme = {
         name = "Papirus-Dark";
@@ -48,13 +52,13 @@
       '';
     };
   };
-    
+   
   dconf = {
     settings = {
         "org/cinnamon/desktop/applications/terminal" = {
             exec = "kitty";
         };
-        "org/gnome/desktop/interface" = {
+       "org/gnome/desktop/interface" = {
             color-scheme = "prefer-dark";
         };
     };
