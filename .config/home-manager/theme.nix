@@ -57,7 +57,7 @@
     # targets.rofi.enable = false;
 
     #FIXME: it doesnt work, it has to do with hyprpaper
-    image = ../../assets/Shogoki.png;
+   # image = ../../assets/Shogoki.png;
 
     # opacity = {
     #   desktop = 0.5;
