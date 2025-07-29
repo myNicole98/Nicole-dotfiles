@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 
 {
-#    imports = [
-#    ./catppuccin.nix
-#  ];
+    imports = [
+    ./theme.nix
+  ];
 
     nixpkgs = {
       config = {
@@ -20,6 +20,19 @@
   
   programs.home-manager.enable = true;
   
+  #gtk = {
+  #  enable = true;
+    #iconTheme = {
+    #  name = "Papirus-Dark";
+    #  package = pkgs.papirus-icon-theme;
+    #};
+  #};
+
+  #qt = {
+  #  enable = true;
+  #};
+ 
+  /*   
   gtk = {
       enable = true;
       font.name = "TeX Gyre Adventor 10";
@@ -82,4 +95,6 @@
     "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
     "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
   };
+  */
+
 }
