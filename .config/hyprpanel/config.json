@@ -509,5 +509,11 @@
     "/"
   ],
   "wallpaper.enable": false,
-  "theme.bar.buttons.monochrome": false
+  "theme.bar.buttons.monochrome": false,
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "Telegram",
+  "menus.dashboard.shortcuts.left.shortcut2.icon": "󰎆",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Telegram",
+  "menus.dashboard.shortcuts.left.shortcut2.command": "feishin",
+  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Feishin"
 }

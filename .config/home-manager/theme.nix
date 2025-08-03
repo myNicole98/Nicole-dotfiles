@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
 
@@ -35,5 +35,12 @@
       platform = "qtct";
     };
   };
+
+  programs.kitty.themeFile = "rose-pine-moon";
+  programs.kitty.settings = {  
+    background_opacity = lib.mkForce 0.8;
+    confirm_os_window_close = 0;
+  };
+  programs.kitty.enable = true;
 }
 
