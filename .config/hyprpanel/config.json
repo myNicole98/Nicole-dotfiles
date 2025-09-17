@@ -469,7 +469,7 @@
   "bar.volume.label": false,
   "bar.launcher.autoDetectIcon": true,
   "theme.bar.buttons.dashboard.enableBorder": false,
-  "bar.workspaces.ignored": "-98",
+  "bar.workspaces.ignored": "-98|11",
   "menus.clock.weather.key": "e6c7f5f059c54c558f9200648251203",
   "menus.media.displayTimeTooltip": false,
   "bar.customModules.ram.round": true,
@@ -503,7 +503,7 @@
   "theme.bar.buttons.modules.cpuTemp.text": "#c4a7e7",
   "theme.bar.buttons.modules.cpuTemp.border": "#c4a7e7",
   "theme.osd.border.color": "#8ff0a4",
-  "theme.font.size": "1.0rem",
+  "theme.font.size": "0.9rem",
   "hyprpanel.restartAgs": true,
   "bar.customModules.storage.paths": [
     "/"
@@ -515,5 +515,12 @@
   "menus.dashboard.shortcuts.left.shortcut2.icon": "󰎆",
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Telegram",
   "menus.dashboard.shortcuts.left.shortcut2.command": "feishin",
-  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Feishin"
+  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Feishin",
+  "theme.bar.layer": "top",
+  "theme.bar.menus.enableShadow": false,
+  "theme.osd.active_monitor": true,
+  "theme.osd.muted_zero": true,
+  "theme.osd.enableShadow": true,
+  "theme.matugen_settings.mode": "dark",
+  "theme.matugen_settings.scheme_type": "tonal-spot"
 }
