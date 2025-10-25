@@ -410,7 +410,7 @@
   "theme.osd.orientation": "horizontal",
   "bar.customModules.microphone.label": false,
   "bar.layouts": {
-    "*": {
+    "0": {
       "left": [
         "dashboard",
         "workspaces",
@@ -435,6 +435,11 @@
         "clock",
         "notifications"
       ]
+    },
+    "1": {
+      "left": [],
+      "middle": [],
+      "right": []
     }
   },
   "wallpaper.pywal": false,
@@ -522,5 +527,6 @@
   "theme.osd.muted_zero": true,
   "theme.osd.enableShadow": true,
   "theme.matugen_settings.mode": "dark",
-  "theme.matugen_settings.scheme_type": "tonal-spot"
+  "theme.matugen_settings.scheme_type": "tonal-spot",
+  "bar.customModules.hyprsunset.temperature": "4000k"
 }
