@@ -156,6 +156,7 @@ spawn-at-startup "kitty"
 spawn-at-startup "app.zen_browser.zen"
 spawn-at-startup "nextcloud"
 spawn-at-startup "element-desktop"
+spawn-at-startup "Jan"
 
 xwayland-satellite {
     path "/run/current-system/sw/bin/xwayland-satellite"
@@ -258,6 +259,16 @@ window-rule {
     open-maximized false
     open-floating true
 }
+
+window-rule {
+    match app-id="Jan"
+    open-maximized false
+    open-floating true
+    default-column-width { proportion 0.2; }
+    default-window-height { proportion 1.0; }
+    default-floating-position x=0 y=0 relative-to="bottom-left"
+    open-on-workspace "special"
+}
 window-rule {
     match app-id=r#"^org\.telegram\.desktop$"# title="^Media viewer$"
     open-fullscreen false
@@ -326,12 +337,17 @@ workspace "generic1"
 workspace "generic2"
 workspace "music"
 workspace "windows"
+workspace "special"
 
 binds {
     // === System & Overview ===
     Mod+Space { spawn "niri" "msg" "action" "toggle-overview"; }
     Mod+Tab repeat=false { toggle-overview; }
     Mod+Shift+Slash { show-hotkey-overlay; }
+
+    // === AI toggle ===
+    Mod+A { spawn "~/.config/niri/scripts/toggleai.sh"; }
+
     
     // === Application Launchers ===
     Mod+Return hotkey-overlay-title="Open Terminal" { spawn "kitty"; }
@@ -373,6 +389,18 @@ binds {
     }
     XF86AudioMicMute allow-when-locked=true {
         spawn "dms" "ipc" "call" "audio" "micmute";
+    }
+    XF86AudioNext allow-when-locked=true {
+        spawn "playerctl" "next";
+    }
+    XF86AudioPrev allow-when-locked=true {
+        spawn "playerctl" "previous";
+    }
+    XF86AudioPause allow-when-locked=true {
+        spawn "playerctl" "play-pause";
+    }
+    XF86AudioPlay allow-when-locked=true {
+        spawn "playerctl" "play-pause";
     }
     
     XF86KbdBrightnessUp allow-when-locked=true {
