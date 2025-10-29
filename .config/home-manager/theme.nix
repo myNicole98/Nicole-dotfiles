@@ -4,8 +4,8 @@
 
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
-    #base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    #base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     polarity = "dark";
 
     fonts = {
@@ -26,8 +26,14 @@
     
     icons = {
       enable = true;
-      package = pkgs.papirus-icon-theme;
-      dark = "Papirus-Dark";
+
+      # Papyrus Dark
+      #package = pkgs.papirus-icon-theme;
+      #dark = "Papirus-Dark";
+      
+      # Fluent
+      package = pkgs.fluent-icon-theme;
+      dark = "Fluent";
     };
 
     targets.nixos-icons.enable = true;
@@ -37,7 +43,8 @@
     };
   };
 
-  programs.kitty.themeFile = "rose-pine-moon";
+  #programs.kitty.themeFile = "rose-pine-moon";
+  programs.kitty.themeFile = "Catppuccin-Mocha";
   programs.kitty.settings = {  
     background_opacity = lib.mkForce 0.8;
     confirm_os_window_close = 0;
