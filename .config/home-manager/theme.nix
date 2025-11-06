@@ -48,6 +48,8 @@
   programs.kitty.settings = {  
     background_opacity = lib.mkForce 0.8;
     confirm_os_window_close = 0;
+    cursor_shape = "beam";
+    cursor_trail = 1;
   };
   programs.kitty.enable = true;
 }

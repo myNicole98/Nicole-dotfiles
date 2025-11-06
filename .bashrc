@@ -15,3 +15,4 @@ bind '"\e[B": history-search-forward'
 bind '"\eOA": history-search-backward'
 bind '"\eOB": history-search-forward'
 
+fastfetch --config ascii-art
