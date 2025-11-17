@@ -16,3 +16,7 @@ bind '"\eOA": history-search-backward'
 bind '"\eOB": history-search-forward'
 
 fastfetch --config ascii-art
+
+# uv
+export PATH="/home/nicole/.local/bin:$PATH"
+alias kimi='kimi --mcp-config-file /home/nicole/.config/kimi/mcp.json'
