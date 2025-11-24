@@ -17,15 +17,10 @@
       url = "github:AvengeMedia/dgop";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    dms-cli = {
-      url = "github:AvengeMedia/danklinux";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     dankMaterialShell = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.dgop.follows = "dgop";
-      inputs.dms-cli.follows = "dms-cli";
     };
     niri = {
       url = "github:sodiboo/niri-flake";
@@ -37,7 +32,7 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, stylix, dgop, dms-cli, dankMaterialShell, niri, quickshell, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, stylix, dgop, dankMaterialShell, niri, quickshell, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};

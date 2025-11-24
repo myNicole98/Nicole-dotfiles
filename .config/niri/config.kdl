@@ -146,11 +146,13 @@ spawn-at-startup "geary"
 spawn-at-startup "kitty"
 spawn-at-startup "kitty"
 spawn-at-startup "kitty"
-spawn-at-startup "app.zen_browser.zen"
 spawn-at-startup "nextcloud"
 spawn-at-startup "element-desktop"
 //spawn-at-startup "Jan"
 spawn-at-startup "msty-studio"
+
+spawn-at-startup "app.zen_browser.zen"
+
 
 xwayland-satellite {
     path "/run/current-system/sw/bin/xwayland-satellite"
