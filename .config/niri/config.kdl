@@ -21,12 +21,8 @@ output "HDMI-A-1" {
     position x=760 y=1440
 }
 
-output "DP-2" {
-    //off
-    mode "1920x1080@60"
-    scale 1
-    transform "normal"
-    position x=760 y=1440
+output "HDMI-A-1" {
+    off
 }
 
 gestures {
