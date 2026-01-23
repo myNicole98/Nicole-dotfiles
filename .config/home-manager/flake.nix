@@ -12,18 +12,16 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    dgop = {
-      url = "github:AvengeMedia/dgop";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     dankMaterialShell = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.dgop.follows = "dgop";
     };
     niri = {
       url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    dgop = {
+      url = "github:AvengeMedia/dgop";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     quickshell = {
@@ -32,7 +30,7 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, stylix, dgop, dankMaterialShell, niri, quickshell, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, stylix, dankMaterialShell, niri, dgop, quickshell, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -43,7 +41,6 @@
         modules = [ 
         stylix.homeModules.stylix
         dankMaterialShell.homeModules.dank-material-shell
-        dankMaterialShell.homeModules.niri
         niri.homeModules.niri
         ./home.nix 
         ];
