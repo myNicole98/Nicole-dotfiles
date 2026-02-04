@@ -28,9 +28,12 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-monitor = {
+      url = "github:antonjah/nix-monitor";
+    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, stylix, dankMaterialShell, niri, dgop, quickshell, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, stylix, dankMaterialShell, niri, dgop, quickshell, nix-monitor, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -42,6 +45,20 @@
         stylix.homeModules.stylix
         dankMaterialShell.homeModules.dank-material-shell
         niri.homeModules.niri
+        nix-monitor.homeManagerModules.default
+        {
+          programs.nix-monitor = {
+            enable = true;
+            
+            # Required: customize for your setup
+            rebuildCommand = [ 
+              "bash" "-c" 
+              "sudo nixos-rebuild switch"
+            ];
+            generationsCommand = [ "sh" "-c" "nix-env --list-generations --profile /nix/var/nix/profiles/system | wc -l" ];
+          };
+        }
+
         ./home.nix 
         ];
 

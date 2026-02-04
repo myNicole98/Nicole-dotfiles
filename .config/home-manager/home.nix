@@ -20,6 +20,11 @@
   ];
   
   programs.home-manager.enable = true;
+
+  services.linux-wallpaperengine = {
+    enable = true;
+    assetsPath = "/mnt/storage/SteamLibrary/steamapps/common/wallpaper_engine/assets";
+  };
   #programs.dankMaterialShell = {
   #enable = true;
   #quickshell.package = inputs.quickshell.packages.x86_64-linux.default;

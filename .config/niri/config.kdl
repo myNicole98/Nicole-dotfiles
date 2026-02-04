@@ -6,20 +6,20 @@ config-notification {
     disable-failed
 }
 // Outputs from existing configuration
-output "DP-1" {
-    mode "3440x1440@160.000"
-    scale 1
-    transform "normal"
-    position x=0 y=0
-}
+//output "DP-1" {
+//    mode "3440x1440@160.000"
+//    scale 1
+//    transform "normal"
+//    position x=0 y=0
+//}
 
-output "HDMI-A-1" {
+//output "HDMI-A-1" {
     //off
-    mode  "1440x900"
-    scale 1
-    transform "normal"
-    position x=760 y=1440
-}
+//    mode  "1440x900"
+//    scale 1
+//    transform "normal"
+//    position x=700 y=1440
+//}
 
 //output "HDMI-A-1" {
 //    #    off
@@ -27,7 +27,7 @@ output "HDMI-A-1" {
 
 gestures {
     hot-corners {
-        off
+        top-left
     }
 }
 
@@ -144,10 +144,12 @@ spawn-at-startup "kitty"
 spawn-at-startup "kitty"
 spawn-at-startup "nextcloud"
 spawn-at-startup "element-desktop"
-//spawn-at-startup "Jan"
+// spawn-at-startup "Jan"
 spawn-at-startup "msty-studio"
+spawn-at-startup "sunshine"
 
 spawn-at-startup "app.zen_browser.zen"
+spawn-at-startup "solaar" "-w" "hide"
 
 
 xwayland-satellite {
@@ -248,6 +250,7 @@ window-rule {
     match app-id="zernity"
     match app-id="org.qbittorrent.qBittorrent"
     match app-id="org.gnome.Calculator"
+    match app-id="solaar"
     open-maximized false
     open-floating true
 }
@@ -284,6 +287,20 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match app-id="org.quickshell"
+    open-fullscreen false
+    open-floating true
+}
+
+window-rule {
+    match app-id="zenity"
+    open-fullscreen false
+    open-floating true
+    default-column-width { proportion 0.3; }
+    default-window-height { proportion 0.4; }
+}
+
 
 window-rule {
     // This regular expression is intentionally made as specific as possible,
@@ -311,6 +328,7 @@ window-rule {
     match app-id=r#"^blueman-manager$"#
     match app-id=r#"^org\.gnome\.Nautilus$"#
     match app-id=r#"^xdg-desktop-portal$"#
+    match app-id=".virt-manager-wrapped"
     open-floating true
 }
 window-rule {
@@ -333,6 +351,15 @@ window-rule {
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
+}
+
+window-rule {
+    match title="Kando Menu"
+    open-floating true
+    open-fullscreen false
+    focus-ring { off; }
+    border { off; }
+    shadow { off; }
 }
 
 workspace "terminal" {
@@ -377,6 +404,8 @@ binds {
 
     // === AI toggle ===
     Mod+A { spawn "~/.config/niri/scripts/togglemsty.sh"; }
+    //Mod+A { spawn "~/.config/niri/scripts/togglejan.sh"; }
+    //Mod+A { spawn "dms" "ipc" "call" "widget" "toggle" "sathiAi"; }
 
     
     // === Application Launchers ===
@@ -406,6 +435,8 @@ binds {
     Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" { 
         spawn "dms" "ipc" "call" "processlist" "toggle"; 
     }
+
+    //Ctrl+Space { spawn "~/.config/niri/get_active_window_id.sh"; }
     
     // === Audio Controls ===
     XF86AudioRaiseVolume allow-when-locked=true {
@@ -450,7 +481,7 @@ binds {
     XF86Calculator allow-when-locked=false {
        spawn "gnome-calculator";
     }
-    
+
     // === Window Management ===
     Mod+Shift+Q repeat=false { close-window; }
     Mod+F { maximize-column; }
@@ -581,7 +612,8 @@ binds {
     
     // === Screenshots ===
     Mod+Shift+S { spawn-sh "grim -g \"$(slurp -d)\" - | wl-copy"; }
-    Shift+Print { spawn-sh "grim -g \"$(slurp -d)\" - | swappy -f -"; }
+    // Shift+Print { spawn-sh "grim -g \"$(slurp -d)\" - | swappy -f -"; }
+    Shift+Print { spawn-sh "grim -g \"$(slurp -d)\" - | satty -f -"; }
     Print { screenshot-screen; }
     //XF86Launch1 { screenshot; }
     //Ctrl+XF86Launch1 { screenshot-screen; }
@@ -593,3 +625,5 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+P { power-off-monitors; }
 }
+
+include "dms/outputs.kdl"
