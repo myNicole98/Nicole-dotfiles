@@ -1,0 +1,5 @@
+%YAML 1.3
+---
+- Key: [Haptic, pressed]
+- Execute: [sh, /home/nicole/.config/niri/get_active_window_id.sh]
+...
