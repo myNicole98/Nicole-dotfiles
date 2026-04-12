@@ -1,0 +1,43 @@
+[config]
+
+[templates.cava]
+input_path = '~/.config/matugen/templates/cava-colors.ini'
+output_path = '~/.config/cava/themes/your-theme'
+post_hook = 'pkill -USR1 cava'
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'
+
+[templates.steam]
+input_path = '~/.config/matugen/templates/steam.css'
+output_path = '~/.config/AdwSteamGtk/custom.css'
+post_hook =  'adwaita-steam-gtk -i'
+
+[templates.papirus]
+input_path = '~/.config/matugen/templates/papirus-trigger'
+output_path = '/tmp/matugen-primary-color'
+post_hook = 'bash ~/.config/matugen/papirus-folders.sh "$(cat /tmp/matugen-primary-color)"'
+
+[templates.telegram_background]
+pre_hook = 'mkdir -p ~/.config/telegram/matugen'
+input_path = '~/.config/matugen/templates/telegram-background-solid.svg'
+output_path = '~/.config/telegram/matugen/background.svg'
+post_hook = 'magick ~/.config/telegram/matugen/background.svg ~/.config/telegram/matugen/background.jpg'
+index = 0
+
+[templates.telegram]
+input_path = '~/.config/matugen/templates/telegram.tdesktop-theme'
+output_path = '~/.config/telegram/matugen/colors.tdesktop-theme'
+post_hook = 'zip -qj - ~/.config/telegram/matugen/colors.tdesktop-theme ~/.config/telegram/matugen/background.jpg >~/.config/telegram/matugen.tdesktop-theme'
+index = 1
+
+[templates.starship]
+input_path = '~/.config/matugen/templates/starship-colors.toml'
+output_path = '~/.config/starship.toml'
+
+[templates.thunderbird]
+input_path = '~/.config/matugen/templates/thunderbird-userChrome.css'
+output_path = '~/.thunderbird/v06i5c82.default/chrome/userChrome.css'
+post_hook = "touch ~/.cache/wal/.tb-reload"

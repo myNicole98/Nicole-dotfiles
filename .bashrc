@@ -15,8 +15,11 @@ bind '"\e[B": history-search-forward'
 bind '"\eOA": history-search-backward'
 bind '"\eOB": history-search-forward'
 
-fastfetch --config ascii-art
+# fastfetch --config ascii-art
 
 # uv
 export PATH="/home/nicole/.local/bin:$PATH"
 alias kimi='kimi --mcp-config-file /home/nicole/.config/kimi/mcp.json'
+
+# sudo alias with user envs
+alias sudonvim='sudo -E nvim'

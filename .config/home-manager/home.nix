@@ -22,7 +22,7 @@
   programs.home-manager.enable = true;
 
   services.linux-wallpaperengine = {
-    enable = true;
+    enable = false;
     assetsPath = "/mnt/storage/SteamLibrary/steamapps/common/wallpaper_engine/assets";
   };
   #programs.dankMaterialShell = {

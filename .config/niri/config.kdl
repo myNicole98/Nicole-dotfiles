@@ -15,7 +15,7 @@ config-notification {
 
 //output "HDMI-A-1" {
     //off
-//    mode  "1440x900"
+    //mode custom=true "3440x1440@85.000"
 //    scale 1
 //    transform "normal"
 //    position x=700 y=1440
@@ -133,23 +133,15 @@ overview {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 spawn-at-startup "dms" "run"
-spawn-at-startup "xwayland-satellite"
-
 spawn-at-startup "Telegram"
 spawn-at-startup "vesktop"
-spawn-at-startup "steam"
-spawn-at-startup "geary"
-spawn-at-startup "kitty"
-spawn-at-startup "kitty"
-spawn-at-startup "kitty"
+//spawn-at-startup "/home/nicole/.scripts/mailspring.sh"
+spawn-at-startup "thunderbird"
 spawn-at-startup "nextcloud"
-spawn-at-startup "element-desktop"
-// spawn-at-startup "Jan"
 spawn-at-startup "msty-studio"
 spawn-at-startup "sunshine"
-
-spawn-at-startup "app.zen_browser.zen"
 spawn-at-startup "solaar" "-w" "hide"
+spawn-at-startup "/home/nicole/.scripts/mx_master_4_haptic_notification.sh"
 
 
 xwayland-satellite {
@@ -227,11 +219,16 @@ window-rule {
     match app-id="Element"
     open-on-workspace "social"
     open-maximized false
-    default-column-width { proportion 0.33333; }
+    default-column-width { proportion 0.66667; }
 
 }
 window-rule {
     match app-id="geary"
+    match app-id="thunderbird"
+    match app-id="Mailspring"
+    match app-id="Proton Mail"
+    open-maximized true
+    //default-column-width { proportion 1; }
     open-on-workspace "mail"
 }
 window-rule {
@@ -251,6 +248,8 @@ window-rule {
     match app-id="org.qbittorrent.qBittorrent"
     match app-id="org.gnome.Calculator"
     match app-id="solaar"
+    match app-id="steam_app_starcitizen"
+    match app-id="com.danklinux.dms"
     open-maximized false
     open-floating true
 }
@@ -271,7 +270,7 @@ window-rule {
     default-column-width { proportion 0.3; }
     default-window-height { proportion 1.0; }
     default-floating-position x=0 y=0 relative-to="bottom-left"
-    opacity 0.95
+    opacity 0.99
     open-on-workspace "special"
 }
 
