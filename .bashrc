@@ -7,8 +7,13 @@ esac
 eval "$(starship init bash)"
 
 # dotfiles management
-alias config='/run/current-system/sw/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-alias nixconfig='/run/current-system/sw/bin/git --git-dir=$HOME/nixdotfiles/ --work-tree=/'
+#alias config='/run/current-system/sw/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+#alias nixconfig='/run/current-system/sw/bin/git --git-dir=$HOME/nixdotfiles/ --work-tree=/'
+
+
+alias nixconfig="GIT_SSH_COMMAND='ssh -i ~/.ssh/id_ed25519' /run/current-system/sw/bin/git --git-dir=$HOME/nixdotfiles/ --work-tree=/"
+
+alias config="GIT_SSH_COMMAND='ssh -i ~/.ssh/id_ed25519' /run/current-system/sw/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
