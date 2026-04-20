@@ -3,6 +3,7 @@
 {
     imports = [
     ./theme.nix
+    ./firefox.nix
     ./dms.nix
   ];
 

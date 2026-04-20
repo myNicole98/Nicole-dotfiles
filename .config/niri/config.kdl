@@ -133,6 +133,8 @@ overview {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 spawn-at-startup "dms" "run"
+spawn-at-startup "rbw" "unlock"
+spawn-at-startup "bitwarden"
 spawn-at-startup "Telegram"
 spawn-at-startup "vesktop"
 //spawn-at-startup "/home/nicole/.scripts/mailspring.sh"
@@ -250,6 +252,7 @@ window-rule {
     match app-id="solaar"
     match app-id="steam_app_starcitizen"
     match app-id="com.danklinux.dms"
+    match app-id="Bitwarden"
     open-maximized false
     open-floating true
 }
@@ -626,3 +629,5 @@ binds {
 }
 
 include "dms/outputs.kdl"
+include "dms/colors.kdl"
+include "dms/alttab.kdl"

@@ -41,3 +41,7 @@ output_path = '~/.config/starship.toml'
 input_path = '~/.config/matugen/templates/thunderbird-userChrome.css'
 output_path = '~/.thunderbird/v06i5c82.default/chrome/userChrome.css'
 post_hook = "touch ~/.cache/wal/.tb-reload"
+
+[templates.wal-colors]
+input_path = "~/.config/matugen/templates/wal-colors"
+output_path = "~/.cache/wal/colors"

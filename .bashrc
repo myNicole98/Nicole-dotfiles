@@ -19,6 +19,7 @@ bind '"\eOB": history-search-forward'
 
 # uv
 export PATH="/home/nicole/.local/bin:$PATH"
+export SSH_AUTH_SOCK=/home/$USER/.bitwarden-ssh-agent.sock
 alias kimi='kimi --mcp-config-file /home/nicole/.config/kimi/mcp.json'
 
 # sudo alias with user envs
