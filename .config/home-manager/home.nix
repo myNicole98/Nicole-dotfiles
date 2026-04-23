@@ -5,6 +5,7 @@
     ./theme.nix
     ./firefox.nix
     ./dms.nix
+    inputs.zen-browser.homeModules.beta
   ];
 
     nixpkgs = {
@@ -21,6 +22,11 @@
   ];
   
   programs.home-manager.enable = true;
+
+  programs.zen-browser = {
+    enable = true;
+    #setAsDefaultBrowser = true;
+  };
 
   services.linux-wallpaperengine = {
     enable = false;

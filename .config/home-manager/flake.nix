@@ -31,9 +31,17 @@
     nix-monitor = {
       url = "github:antonjah/nix-monitor";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        # IMPORTANT: To ensure compatibility with the latest Firefox version, use nixpkgs-unstable.
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, stylix, dankMaterialShell, niri, dgop, quickshell, nix-monitor, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, stylix, dankMaterialShell, niri, dgop, quickshell, nix-monitor, zen-browser, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};

@@ -45,3 +45,4 @@ post_hook = "touch ~/.cache/wal/.tb-reload"
 [templates.wal-colors]
 input_path = "~/.config/matugen/templates/wal-colors"
 output_path = "~/.cache/wal/colors"
+

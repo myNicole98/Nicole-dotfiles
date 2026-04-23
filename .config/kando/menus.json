@@ -1,12 +1,7 @@
 {
+  "version": "2.1.2",
   "menus": [
     {
-      "shortcut": "",
-      "shortcutID": "default-menu",
-      "centered": false,
-      "anchored": false,
-      "hoverMode": false,
-      "tags": [],
       "root": {
         "type": "submenu",
         "name": "Default Menu",
@@ -15,90 +10,90 @@
         "children": [
           {
             "type": "hotkey",
-            "name": "Toggle Float",
-            "icon": "float_landscape_2",
-            "iconTheme": "material-symbols-rounded",
             "data": {
               "hotkey": "MetaLeft+ShiftLeft+KeyT",
               "delayed": true
-            }
+            },
+            "name": "Toggle Float",
+            "icon": "float_landscape_2",
+            "iconTheme": "material-symbols-rounded"
           },
           {
             "type": "command",
-            "name": "Up",
-            "icon": "arrow_circle_up",
-            "iconTheme": "material-symbols-rounded",
             "data": {
               "command": "niri msg action focus-workspace-up",
               "detached": true,
               "isolated": false,
               "delayed": false
             },
+            "name": "Up",
+            "icon": "arrow_circle_up",
+            "iconTheme": "material-symbols-rounded",
             "angle": 0
           },
           {
             "type": "submenu",
+            "data": {},
             "name": "Media",
             "icon": "headphones",
             "iconTheme": "material-symbols-rounded",
-            "data": {},
             "children": [
               {
                 "type": "hotkey",
-                "name": "Next",
-                "icon": "skip_next",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "MediaTrackNext",
                   "delayed": true
-                }
+                },
+                "name": "Next",
+                "icon": "skip_next",
+                "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "hotkey",
-                "name": "Play|Pause",
-                "icon": "play_pause",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "MediaPlayPause",
                   "delayed": true
-                }
+                },
+                "name": "Play|Pause",
+                "icon": "play_pause",
+                "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "hotkey",
-                "name": "Previous",
-                "icon": "skip_previous",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "MediaTrackPrevious",
                   "delayed": true
-                }
+                },
+                "name": "Previous",
+                "icon": "skip_previous",
+                "iconTheme": "material-symbols-rounded"
               }
             ],
             "angle": 90
           },
           {
             "type": "command",
-            "name": "Down",
-            "icon": "arrow_circle_down",
-            "iconTheme": "material-symbols-rounded",
             "data": {
               "command": "niri msg action focus-workspace-down",
               "detached": true,
               "isolated": false,
               "delayed": false
             },
+            "name": "Down",
+            "icon": "arrow_circle_down",
+            "iconTheme": "material-symbols-rounded",
             "angle": 180
           }
         ]
-      }
-    },
-    {
+      },
       "shortcut": "",
-      "shortcutID": "zen-browser",
+      "shortcutID": "default-menu",
       "centered": false,
       "anchored": false,
       "hoverMode": false,
-      "tags": [],
+      "tags": []
+    },
+    {
       "root": {
         "type": "submenu",
         "name": "Zen Browser",
@@ -107,76 +102,76 @@
         "children": [
           {
             "type": "hotkey",
-            "name": "Compact Mode",
-            "icon": "view_compact_alt",
-            "iconTheme": "material-symbols-rounded",
             "data": {
               "hotkey": "ControlLeft+AltLeft+KeyC",
               "delayed": true
-            }
+            },
+            "name": "Compact Mode",
+            "icon": "view_compact_alt",
+            "iconTheme": "material-symbols-rounded"
           },
           {
             "type": "hotkey",
-            "name": "Forward",
-            "icon": "arrow_circle_right",
-            "iconTheme": "material-symbols-rounded",
             "data": {
               "hotkey": "AltLeft+ArrowRight",
               "delayed": true
             },
+            "name": "Forward",
+            "icon": "arrow_circle_right",
+            "iconTheme": "material-symbols-rounded",
             "angle": 90
           },
           {
             "type": "hotkey",
-            "name": "Split V",
-            "icon": "split_scene_up",
-            "iconTheme": "material-symbols-rounded",
             "data": {
               "hotkey": "ControlLeft+AltLeft+KeyH",
               "delayed": true
-            }
+            },
+            "name": "Split V",
+            "icon": "split_scene_up",
+            "iconTheme": "material-symbols-rounded"
           },
           {
             "type": "hotkey",
-            "name": "Unsplit",
-            "icon": "tab",
-            "iconTheme": "material-symbols-rounded",
             "data": {
               "hotkey": "ControlLeft+AltLeft+KeyU",
               "delayed": true
-            }
+            },
+            "name": "Unsplit",
+            "icon": "tab",
+            "iconTheme": "material-symbols-rounded"
           },
           {
             "type": "hotkey",
-            "name": "Split H",
-            "icon": "split_scene_left",
-            "iconTheme": "material-symbols-rounded",
             "data": {
               "hotkey": "ControlLeft+AltLeft+KeyV",
               "delayed": true
-            }
+            },
+            "name": "Split H",
+            "icon": "split_scene_left",
+            "iconTheme": "material-symbols-rounded"
           },
           {
             "type": "hotkey",
-            "name": "Back",
-            "icon": "arrow_circle_left",
-            "iconTheme": "material-symbols-rounded",
             "data": {
               "hotkey": "AltLeft+ArrowLeft",
               "delayed": true
             },
+            "name": "Back",
+            "icon": "arrow_circle_left",
+            "iconTheme": "material-symbols-rounded",
             "angle": 270
           }
         ]
-      }
-    },
-    {
+      },
       "shortcut": "",
-      "shortcutID": "gimp-menu",
+      "shortcutID": "zen-browser",
       "centered": false,
       "anchored": false,
       "hoverMode": false,
-      "tags": [],
+      "tags": []
+    },
+    {
       "root": {
         "type": "submenu",
         "name": "GIMP",
@@ -191,53 +186,53 @@
             "children": [
               {
                 "type": "hotkey",
-                "name": "New Layer",
-                "icon": "add",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "ShiftLeft+ControlLeft+KeyN",
                   "delayed": true
-                }
+                },
+                "name": "New Layer",
+                "icon": "add",
+                "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "hotkey",
-                "name": "Duplicate Layer",
-                "icon": "content_copy",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "ShiftLeft+ControlLeft+KeyD",
                   "delayed": true
-                }
+                },
+                "name": "Duplicate Layer",
+                "icon": "content_copy",
+                "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "hotkey",
-                "name": "Merge Down",
-                "icon": "merge_type",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "ControlLeft+KeyE",
                   "delayed": true
-                }
+                },
+                "name": "Merge Down",
+                "icon": "merge_type",
+                "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "hotkey",
-                "name": "Merge Visible",
-                "icon": "layers_clear",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "ShiftLeft+ControlLeft+KeyM",
                   "delayed": true
-                }
+                },
+                "name": "Merge Visible",
+                "icon": "layers_clear",
+                "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "hotkey",
-                "name": "New from Visible",
-                "icon": "auto_fix_high",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "ShiftLeft+ControlLeft+AltLeft+KeyN",
                   "delayed": true
-                }
+                },
+                "name": "New from Visible",
+                "icon": "auto_fix_high",
+                "iconTheme": "material-symbols-rounded"
               }
             ]
           },
@@ -249,98 +244,104 @@
             "children": [
               {
                 "type": "hotkey",
-                "name": "Paintbrush",
-                "icon": "brush",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "KeyP",
                   "delayed": true
-                }
+                },
+                "name": "Paintbrush",
+                "icon": "brush",
+                "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "hotkey",
-                "name": "Eraser",
-                "icon": "cleaning_services",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "ShiftLeft+KeyE",
                   "delayed": true
-                }
+                },
+                "name": "Eraser",
+                "icon": "cleaning_services",
+                "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "hotkey",
-                "name": "Move",
-                "icon": "open_with",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "KeyM",
                   "delayed": true
-                }
+                },
+                "name": "Move",
+                "icon": "open_with",
+                "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "hotkey",
-                "name": "Rectangle Select",
-                "icon": "rectangle",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "KeyR",
                   "delayed": true
-                }
+                },
+                "name": "Rectangle Select",
+                "icon": "rectangle",
+                "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "hotkey",
-                "name": "Ellipse Select",
-                "icon": "lens",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "KeyE",
                   "delayed": true
-                }
+                },
+                "name": "Ellipse Select",
+                "icon": "lens",
+                "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "hotkey",
-                "name": "Color Picker",
-                "icon": "colorize",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "KeyO",
                   "delayed": true
-                }
+                },
+                "name": "Color Picker",
+                "icon": "colorize",
+                "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "hotkey",
-                "name": "Zoom",
-                "icon": "zoom_in",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "KeyZ",
                   "delayed": true
-                }
+                },
+                "name": "Zoom",
+                "icon": "zoom_in",
+                "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "hotkey",
-                "name": "Text",
-                "icon": "text_fields",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "KeyT",
                   "delayed": true
-                }
+                },
+                "name": "Text",
+                "icon": "text_fields",
+                "iconTheme": "material-symbols-rounded"
               }
             ]
           },
           {
             "type": "hotkey",
-            "name": "Ruler",
-            "icon": "align_flex_end",
-            "iconTheme": "material-symbols-rounded",
             "data": {
               "hotkey": "ControlLeft+ShiftLeft+KeyR",
               "delayed": true
-            }
+            },
+            "name": "Ruler",
+            "icon": "align_flex_end",
+            "iconTheme": "material-symbols-rounded"
           }
         ]
-      }
+      },
+      "shortcut": "",
+      "shortcutID": "gimp-menu",
+      "centered": false,
+      "anchored": false,
+      "hoverMode": false,
+      "tags": []
     }
   ],
   "collections": [

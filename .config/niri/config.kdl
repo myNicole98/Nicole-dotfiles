@@ -209,6 +209,9 @@ window-rule {
     open-on-workspace "terminal"
     open-maximized false
     default-column-width { proportion 0.33333; }
+    background-effect {
+        blur true
+    }
 }
 window-rule {
     match app-id="app.zen_browser.zen"
@@ -257,6 +260,18 @@ window-rule {
     open-floating true
 }
 
+// ZE BIG BLUR
+window-rule {
+    opacity 0.9
+    background-effect { 
+      blur true 
+    }
+    match app-id=r#"^org\.gnome\.Nautilus$"#
+    match app-id="fsearch"
+    match app-id="feishin"
+    match app-id="MstyStudio"
+}
+
 window-rule {
     match app-id="Jan"
     open-maximized false
@@ -273,7 +288,6 @@ window-rule {
     default-column-width { proportion 0.3; }
     default-window-height { proportion 1.0; }
     default-floating-position x=0 y=0 relative-to="bottom-left"
-    opacity 0.99
     open-on-workspace "special"
 }
 
