@@ -137,8 +137,8 @@ spawn-at-startup "rbw" "unlock"
 spawn-at-startup "bitwarden"
 spawn-at-startup "Telegram"
 spawn-at-startup "vesktop"
-//spawn-at-startup "/home/nicole/.scripts/mailspring.sh"
-spawn-at-startup "thunderbird"
+spawn-at-startup "/home/nicole/.scripts/mailspring.sh"
+//spawn-at-startup "thunderbird"
 spawn-at-startup "nextcloud"
 spawn-at-startup "msty-studio"
 spawn-at-startup "sunshine"
@@ -216,6 +216,10 @@ window-rule {
 window-rule {
     match app-id="app.zen_browser.zen"
     open-on-workspace "browser"
+    background-effect {
+        blur true
+    }
+
 }
 window-rule {
     match app-id=r#"^org\.telegram\.desktop$"#
@@ -630,7 +634,7 @@ binds {
     // === Screenshots ===
     Mod+Shift+S { spawn-sh "grim -g \"$(slurp -d)\" - | wl-copy"; }
     // Shift+Print { spawn-sh "grim -g \"$(slurp -d)\" - | swappy -f -"; }
-    Shift+Print { spawn-sh "grim -g \"$(slurp -d)\" - | satty -f -"; }
+    Shift+Print { spawn-sh "grim -g \"$(slurp -d)\" - | satty --corner-roundness 0 --no-window-decoration --initial-tool blur --default-fill-shapes -f -"; }
     Print { screenshot-screen; }
     //XF86Launch1 { screenshot; }
     //Ctrl+XF86Launch1 { screenshot-screen; }

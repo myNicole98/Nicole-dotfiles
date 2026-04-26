@@ -46,3 +46,10 @@ post_hook = "touch ~/.cache/wal/.tb-reload"
 input_path = "~/.config/matugen/templates/wal-colors"
 output_path = "~/.cache/wal/colors"
 
+[templates.mailspring]
+input_path = "~/.config/matugen/templates/ui-variables"
+output_path = "~/.config/Mailspring/packages/Matugen/styles/ui-variables.less"
+
+[templates.millennium]
+input_path = "~/.config/matugen/templates/millennium-material-matugen.css"
+output_path = '~/.steam/steam/steamui/skins/Material-Theme/css/main/colors/matugen.css'
