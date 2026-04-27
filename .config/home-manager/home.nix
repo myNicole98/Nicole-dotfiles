@@ -19,6 +19,7 @@
   home.homeDirectory = "/home/nicole";
   home.stateVersion = "25.11"; # Please read the comment before changing.
   home.packages = with pkgs; [
+    kdePackages.qt5compat
   ];
   
   programs.home-manager.enable = true;

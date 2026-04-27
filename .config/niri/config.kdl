@@ -140,7 +140,7 @@ spawn-at-startup "vesktop"
 spawn-at-startup "/home/nicole/.scripts/mailspring.sh"
 //spawn-at-startup "thunderbird"
 spawn-at-startup "nextcloud"
-spawn-at-startup "msty-studio"
+//spawn-at-startup "msty-studio"
 spawn-at-startup "sunshine"
 spawn-at-startup "solaar" "-w" "hide"
 spawn-at-startup "/home/nicole/.scripts/mx_master_4_haptic_notification.sh"
@@ -221,9 +221,12 @@ window-rule {
     }
 
 }
+
 window-rule {
     match app-id=r#"^org\.telegram\.desktop$"#
-    exclude app-id=r#"^org\.telegram\.desktop$"# title="^Media viewer$"
+    match app-id="io.github.tdesktop_x64.TDesktop"
+    exclude app-id=r#"^org\.telegram\.desktop$"# title="Media viewer"
+    exclude app-id="io.github.tdesktop_x64.TDesktop" title="Media viewer"
     match app-id="vesktop"
     match app-id="Element"
     open-on-workspace "social"
@@ -274,6 +277,7 @@ window-rule {
     match app-id="fsearch"
     match app-id="feishin"
     match app-id="MstyStudio"
+
 }
 
 window-rule {
@@ -297,6 +301,7 @@ window-rule {
 
 window-rule {
     match app-id=r#"^org\.telegram\.desktop$"# title="^Media viewer$"
+    match app-id="io.github.tdesktop_x64.TDesktop" title="^Media viewer$"
     open-fullscreen false
     open-floating true
 }
@@ -423,9 +428,9 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // === AI toggle ===
-    Mod+A { spawn "~/.config/niri/scripts/togglemsty.sh"; }
+    //Mod+A { spawn "~/.config/niri/scripts/togglemsty.sh"; }
     //Mod+A { spawn "~/.config/niri/scripts/togglejan.sh"; }
-    //Mod+A { spawn "dms" "ipc" "call" "widget" "toggle" "sathiAi"; }
+    Mod+A { spawn "dms" "ipc" "call" "plugins" "toggle" "ephemera-mcp"; }
 
     
     // === Application Launchers ===
@@ -538,10 +543,10 @@ binds {
     Mod+Ctrl+End  { move-column-to-last; }
     
     // === Monitor Navigation ===
-    Mod+Ctrl+Left  { focus-monitor-left; }
+    //Mod+Ctrl+Left  { focus-monitor-left; }
     //Mod+Ctrl+Down  { focus-monitor-down; }
     //Mod+Ctrl+Up    { focus-monitor-up; }
-    Mod+Ctrl+Right { focus-monitor-right; }
+    //Mod+Ctrl+Right { focus-monitor-right; }
     Mod+Ctrl+H     { focus-monitor-left; }
     Mod+Ctrl+J     { focus-monitor-down; }
     Mod+Ctrl+K     { focus-monitor-up; }
@@ -613,8 +618,8 @@ binds {
     Mod+Shift+9 { move-column-to-workspace 9; }
     
     // === Column Management ===
-    Mod+BracketLeft  { consume-or-expel-window-left; }
-    Mod+BracketRight { consume-or-expel-window-right; }
+    Mod+Ctrl+Left  { consume-or-expel-window-left; }
+    Mod+Ctrl+Right { consume-or-expel-window-right; }
     Mod+Period { expel-window-from-column; }
     
     // === Sizing & Layout ===
