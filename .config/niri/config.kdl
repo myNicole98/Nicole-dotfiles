@@ -276,8 +276,8 @@ window-rule {
     match app-id=r#"^org\.gnome\.Nautilus$"#
     match app-id="fsearch"
     match app-id="feishin"
+    match app-id="spotify"
     match app-id="MstyStudio"
-
 }
 
 window-rule {

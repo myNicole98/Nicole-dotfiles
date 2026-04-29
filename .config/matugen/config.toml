@@ -53,3 +53,8 @@ output_path = "~/.config/Mailspring/packages/Matugen/styles/ui-variables.less"
 [templates.millennium]
 input_path = "~/.config/matugen/templates/millennium-material-matugen.css"
 output_path = '~/.steam/steam/steamui/skins/Material-Theme/css/main/colors/matugen.css'
+
+[templates.spotify]
+input_path = '~/.config/matugen/templates/spicetify.ini'
+output_path = '~/.config/spicetify/Themes/Sleek/color.ini'
+post_hook = 'spicetify watch -s 2>&1 | sed "/Reloaded Spotify/q"'
