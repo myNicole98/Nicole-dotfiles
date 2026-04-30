@@ -417,9 +417,9 @@ workspace "music" {
 workspace "windows" {
     open-on-output "DP-1"
 }
-workspace "special" {
-    open-on-output "DP-1"
-}
+//workspace "special" {
+//    open-on-output "DP-1"
+//}
 
 binds {
     // === System & Overview ===
