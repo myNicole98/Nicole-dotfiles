@@ -5,7 +5,7 @@
     ./theme.nix
     ./firefox.nix
     ./dms.nix
-    inputs.zen-browser.homeModules.beta
+    inputs.zen-browser.homeModules.twilight
   ];
 
     nixpkgs = {
@@ -17,15 +17,16 @@
 
   home.username = "nicole";
   home.homeDirectory = "/home/nicole";
-  home.stateVersion = "25.11"; # Please read the comment before changing.
+  home.stateVersion = "26.05"; # Please read the comment before changing.
   home.packages = with pkgs; [
     kdePackages.qt5compat
+    rose-pine-cursor
   ];
   
   programs.home-manager.enable = true;
 
   programs.zen-browser = {
-    enable = false;
+    enable = true;
     #setAsDefaultBrowser = true;
   };
 

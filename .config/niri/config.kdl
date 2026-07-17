@@ -215,6 +215,8 @@ window-rule {
 }
 window-rule {
     match app-id="app.zen_browser.zen"
+    default-column-width { proportion 0.5; }
+    open-maximized false
     open-on-workspace "browser"
     background-effect {
         blur true
@@ -254,6 +256,14 @@ window-rule {
 }
 
 window-rule {
+    match app-id="be.alexandervanhee.gradia"
+    open-maximized false
+    open-floating true
+    default-column-width { fixed 1920; }
+    default-window-height { fixed 1100; }
+}
+
+window-rule {
     match app-id="fsearch"
     match app-id="org.gnome.NautilusPreviewer"
     match app-id="zernity"
@@ -263,6 +273,7 @@ window-rule {
     match app-id="steam_app_starcitizen"
     match app-id="com.danklinux.dms"
     match app-id="Bitwarden"
+    match app-id="io.missioncenter.MissionCenter"
     open-maximized false
     open-floating true
 }
@@ -278,6 +289,7 @@ window-rule {
     match app-id="feishin"
     match app-id="spotify"
     match app-id="MstyStudio"
+    match app-id="io.missioncenter.MissionCenter"
 }
 
 window-rule {
@@ -639,15 +651,9 @@ binds {
     // === Screenshots ===
     Mod+Shift+S { spawn-sh "grim -g \"$(slurp -d)\" - | wl-copy"; }
     // Shift+Print { spawn-sh "grim -g \"$(slurp -d)\" - | swappy -f -"; }
-    Shift+Print { spawn-sh "grim -g \"$(slurp -d)\" - | satty --corner-roundness 0 --no-window-decoration --initial-tool blur --default-fill-shapes -f -"; }
+    //Shift+Print { spawn-sh "grim -g \"$(slurp -d)\" - | satty --corner-roundness 0 --no-window-decoration --initial-tool blur --default-fill-shapes -f -"; }
+    Shift+Print { spawn-sh "grim -g \"$(slurp -)\" - | gradia"; } 
     Print { screenshot-screen; }
-    //XF86Launch1 { screenshot; }
-    //Ctrl+XF86Launch1 { screenshot-screen; }
-    //Alt+XF86Launch1 { screenshot-window; }
-    //Print { screenshot; }    
-    //Ctrl+Print { screenshot-screen; }
-    //Alt+Print { screenshot-window; }
-    // === System Controls ===
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+P { power-off-monitors; }
 }
@@ -655,3 +661,6 @@ binds {
 include "dms/outputs.kdl"
 include "dms/colors.kdl"
 include "dms/alttab.kdl"
+
+include "dms/windowrules.kdl"
+include "dms/cursor.kdl"

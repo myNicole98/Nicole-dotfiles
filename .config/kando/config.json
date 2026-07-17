@@ -1,5 +1,5 @@
 {
-  "version": "2.1.2",
+  "version": "2.3.0",
   "locale": "auto",
   "showIntroductionDialog": false,
   "menuTheme": "default",
@@ -18,6 +18,7 @@
   },
   "darkMenuThemeColors": {},
   "enableDarkModeForMenuThemes": false,
+  "enableSelectionWedges": false,
   "soundTheme": "simple-clicks",
   "soundVolume": 0.5,
   "enableVersionCheck": true,
@@ -30,6 +31,8 @@
   "zoomFactor": 1.3,
   "hideSettingsButton": true,
   "settingsButtonPosition": "bottom-right",
+  "windowsInkWorkaround": true,
+  "maxSelectionRadius": 0,
   "centerDeadZone": 50,
   "minParentDistance": 150,
   "dragThreshold": 15,
@@ -50,5 +53,10 @@
   "gamepadBackButton": 1,
   "gamepadCloseButton": 2,
   "sameShortcutBehavior": "nothing",
-  "useDefaultOsShowSettingsHotkey": true
+  "wlrootsPointerGetTimeoutMouse": 500,
+  "wlrootsPointerGetTimeoutTouch": 1500,
+  "wlrootsPointerGetTimeoutDefaultBehavior": "center",
+  "useDefaultOsShowSettingsHotkey": true,
+  "enableAchievements": true,
+  "enableAchievementNotifications": true
 }
