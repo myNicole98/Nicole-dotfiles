@@ -442,7 +442,7 @@ binds {
     // === AI toggle ===
     //Mod+A { spawn "~/.config/niri/scripts/togglemsty.sh"; }
     //Mod+A { spawn "~/.config/niri/scripts/togglejan.sh"; }
-    Mod+A { spawn "dms" "ipc" "call" "plugins" "toggle" "ephemera-mcp"; }
+    Mod+A { spawn "dms" "ipc" "call" "plugins" "toggle" "ephemera"; }
 
     
     // === Application Launchers ===
