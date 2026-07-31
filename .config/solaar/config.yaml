@@ -18,7 +18,7 @@
     headset-advanced-eq, headset_led_control, headset-onboard-effect, headset_per_zone_lighting, headset-signature-startup, headset-signature-shutdown,
     headset-signature-passive, logivoice-nr-state, logivoice-ng-state, logivoice-comp-state, logivoice-depopper-state, logivoice-limiter-state, logivoice-hpf-state]
   _battery: 4100
-  _config_cookie: [149, 225]
+  _config_cookie: [218, 71]
   _dpi-sliding: 16
   _modelId: B04200000000
   _sensitive: {change-host: false, divert-keys: true, dpi: true, force-sensing: true, haptic-level: true, hires-scroll-mode: ignore, hires-smooth-invert: ignore,
