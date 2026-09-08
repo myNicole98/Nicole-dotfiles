@@ -29,3 +29,5 @@ alias kimi='kimi --mcp-config-file /home/nicole/.config/kimi/mcp.json'
 
 # sudo alias with user envs
 alias sudonvim='sudo -E nvim'
+
+alias rawforge="steam-run rawforge"

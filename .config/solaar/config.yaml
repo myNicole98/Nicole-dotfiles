@@ -10,15 +10,16 @@
   lowres-scroll-mode: false
   reprogrammable-keys: {82: 82, 83: 83, 86: 86}
 - _NAME: MX Master 4
-  _absent: [onboard_profiles, report_rate, report_rate_extended, dpi_extended, speed-change, backlight, backlight_level, backlight_duration_hands_out, backlight_duration_hands_in,
+  _absent: [report_rate, report_rate_extended, dpi_extended, speed-change, backlight, backlight_level, backlight_duration_hands_out, backlight_duration_hands_in,
     backlight_duration_powered, backlight-timed, led_control, led_zone_, rgb_control, rgb_zone_, per-key-lighting, brightness_control, rgb_startup_animation,
-    rgb_shutdown_animation, fn-swap, persistent-remappable-keys, crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led, multiplatform, gesture2-gestures,
-    gesture2-divert, gesture2-params, analog-button-tuning, sidetone, equalizer, adc_power_management, headset-eco-mode, headset-do-not-disturb, headset-mic-mute,
-    headset-mic-snr, headset-ai-nr-level, headset-sidetone, headset-mic-gain, headset-mix-balance, headset-auto-sleep, headset-onboard-eq, headset-eq-active-preset,
-    headset-advanced-eq, headset_led_control, headset-onboard-effect, headset_per_zone_lighting, headset-signature-startup, headset-signature-shutdown,
-    headset-signature-passive, logivoice-nr-state, logivoice-ng-state, logivoice-comp-state, logivoice-depopper-state, logivoice-limiter-state, logivoice-hpf-state]
+    rgb_shutdown_animation, fn-swap, crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led, multiplatform, gesture2-gestures, gesture2-divert,
+    gesture2-params, analog-button-tuning, sidetone, adc_power_management, headset-eco-mode, headset-do-not-disturb, headset-mic-mute, headset-mic-snr,
+    headset-ai-nr-level, headset-sidetone, headset-mic-gain, headset-mix-balance, headset-auto-sleep, headset-onboard-eq, headset-eq-active-preset, headset-advanced-eq,
+    headset_led_control, headset-onboard-effect, headset_per_zone_lighting, headset-signature-startup, headset-signature-shutdown, headset-signature-passive,
+    logivoice-nr-state, logivoice-ng-state, logivoice-comp-state, logivoice-depopper-state, logivoice-limiter-state, logivoice-hpf-state, persistent-remappable-keys,
+    equalizer, onboard_profiles]
   _battery: 4100
-  _config_cookie: [218, 71]
+  _config_cookie: [163, 232]
   _dpi-sliding: 16
   _modelId: B04200000000
   _sensitive: {change-host: false, divert-keys: true, dpi: true, force-sensing: true, haptic-level: true, hires-scroll-mode: ignore, hires-smooth-invert: ignore,

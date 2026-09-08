@@ -225,6 +225,12 @@ window-rule {
 }
 
 window-rule {
+    match app-id="waydroid"
+    open-maximized false
+    default-column-width { proportion 0.33333; }
+}
+
+window-rule {
     match app-id=r#"^org\.telegram\.desktop$"#
     match app-id="io.github.tdesktop_x64.TDesktop"
     exclude app-id=r#"^org\.telegram\.desktop$"# title="Media viewer"
@@ -272,7 +278,7 @@ window-rule {
     match app-id="solaar"
     match app-id="steam_app_starcitizen"
     match app-id="com.danklinux.dms"
-    match app-id="Bitwarden"
+    match app-id="bitwarden"
     match app-id="io.missioncenter.MissionCenter"
     open-maximized false
     open-floating true
@@ -356,6 +362,7 @@ window-rule {
     match app-id=r#"^gnome-control-center$"#
     match app-id=r#"^pavucontrol$"#
     match app-id=r#"^nm-connection-editor$"#
+    match app-id=r#"^rendapp$"#
     default-column-width { proportion 0.5; }
     open-floating false
 }
@@ -442,7 +449,7 @@ binds {
     // === AI toggle ===
     //Mod+A { spawn "~/.config/niri/scripts/togglemsty.sh"; }
     //Mod+A { spawn "~/.config/niri/scripts/togglejan.sh"; }
-    Mod+A { spawn "dms" "ipc" "call" "plugins" "toggle" "ephemera"; }
+    Mod+A { spawn "dms" "ipc" "call" "plugins" "toggle" "nexusAi"; }
 
     
     // === Application Launchers ===
@@ -652,7 +659,8 @@ binds {
     Mod+Shift+S { spawn-sh "grim -g \"$(slurp -d)\" - | wl-copy"; }
     // Shift+Print { spawn-sh "grim -g \"$(slurp -d)\" - | swappy -f -"; }
     //Shift+Print { spawn-sh "grim -g \"$(slurp -d)\" - | satty --corner-roundness 0 --no-window-decoration --initial-tool blur --default-fill-shapes -f -"; }
-    Shift+Print { spawn-sh "grim -g \"$(slurp -)\" - | gradia"; } 
+    //Shift+Print { spawn-sh "grim -g \"$(slurp -)\" - | gradia"; } 
+    Shift+Print { spawn-sh "dms ipc call quickCapture screenshot region edit"; } 
     Print { screenshot-screen; }
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+P { power-off-monitors; }

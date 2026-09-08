@@ -58,5 +58,5 @@
   "wlrootsPointerGetTimeoutDefaultBehavior": "center",
   "useDefaultOsShowSettingsHotkey": true,
   "enableAchievements": true,
-  "enableAchievementNotifications": true
+  "enableAchievementNotifications": false
 }
